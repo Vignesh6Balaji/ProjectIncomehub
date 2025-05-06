@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoIncomeHub</title>
+    <style>
+        :root {
+            --bg-color: white;
+            --text-color: black;
+        }
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: white;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header {
+            padding: 20px;
+            text-align: center;
+            background: #6200ee;
+            color: white;
+        }
+        .toggle-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            padding: 20px;
+            background: var(--bg-color);
+            color: var(--text-color);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #6200ee;
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle-container">
+        <label>
+            <input type="checkbox" onclick="toggleDarkMode()"> Dark Mode
+        </label>
+    </div>
+    <header>
+        <h1>AutoIncomeHub</h1>
+        <p>Access all your passive income apps in one place</p>
+    </header>
+    <main class="projects">
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=Sivapuranam" alt="Sivapuranam">
+            <h3>YouTube Shorts Generator</h3>
+            <a href="#">Open App</a>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=Book" alt="Book Bloom">
+            <h3>Book Bloom</h3>
+            <a href="#">Open App</a>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=Store" alt="Local Store">
+            <h3>Local Store</h3>
+            <a href="#">Open App</a>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=Wall" alt="InspireWall">
+            <h3>InspireWall</h3>
+            <a href="#">Open App</a>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=Affiliate" alt="AffiliateBlaster">
+            <h3>Affiliate & Product Generator</h3>
+            <a href="#">Open App</a>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=Hobby" alt="HobbyHub">
+            <h3>HobbyHub</h3>
+            <a href="#">Download APK</a>
+        </div>
+    </main>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
